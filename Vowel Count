@@ -1,0 +1,22 @@
+#include <stddef.h>
+#include <stdio.h>
+#include <ctype.h>
+
+int get_count(const char *s)
+{
+  int vowels = 0;
+  char word;
+  while(*s != '\0'){
+    word = tolower(*s);
+    if(word=='a' || word=='e' || word=='i' || word=='o'|| word=='u'){
+      vowels++; 
+    }
+    s++;
+  }
+  return vowels;
+}
+
+
+int main() {
+ printf("The string has %d vowels.", get_count("Hello Robocop!"));
+}
